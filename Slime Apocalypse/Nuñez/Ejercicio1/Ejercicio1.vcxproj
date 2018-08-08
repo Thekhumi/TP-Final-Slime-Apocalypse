@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2EB60A69-664C-4AD2-BA97-CE715E23265E}</ProjectGuid>
+    <RootNamespace>Ejercicio1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\lib;$(SolutionDir)Libs\Allegro\allegro_dependencies_x86\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>winmm.lib;opengl32.lib;psapi.lib;shlwapi.lib;jpeg.lib;libpng16.lib;zlib.lib;allegro-debug.lib;allegro_ttf-debug.lib;allegro_primitives-debug.lib;allegro_main-debug.lib;allegro_image-debug.lib;allegro_color-debug.lib;allegro_memfile-debug.lib;allegro_dialog-debug.lib;allegro_audio-debug.lib;allegro_acodec-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro-debug-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_color-debug-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_image-debug-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_main-debug-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_memfile-debug-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_primitives-debug-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_ttf-debug-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_dialog-debug-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_audio-debug-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_acodec-debug-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\player.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\enemy.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\menu.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\bullet.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\Background.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\Hit.ogg" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\Sniper_Rifle.ogg" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\Assault_Riffle.ogg" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\music.ogg" "$(OutDir)" /y
+</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\lib;$(SolutionDir)Libs\Allegro\allegro_dependencies_x86\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>winmm.lib;opengl32.lib;psapi.lib;shlwapi.lib;jpeg.lib;libpng16.lib;zlib.lib;allegro.lib;allegro_ttf.lib;allegro_primitives.lib;allegro_main.lib;allegro_image.lib;allegro_memfile.lib;allegro_dialog.lib;allegro_audio.lib;allegro_acodec.lib;allegro_font.lib;allegro_color.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)Ejercicio1\player.png" "$(OutDir)"
+copy "$(SolutionDir)Ejercicio1\enemy.png" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_color-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_image-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_main-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_memfile-5.1.dll" "$(OutDir)"
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_primitives-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_ttf-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_dialog-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_audio-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Libs\Allegro\allegro_5.1.12_x86\bin\allegro_acodec-5.1.dll" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\player.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\enemy.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\menu.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\bullet.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\Background.png" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\Hit.ogg" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\Sniper_Rifle.ogg" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\Assault_Riffle.ogg" "$(OutDir)" /y
+copy "$(SolutionDir)Ejercicio1\music.ogg" "$(OutDir)" /y
+</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Bala.cpp" />
+    <ClCompile Include="Enemigo.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bala.h" />
+    <ClInclude Include="Enemigo.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

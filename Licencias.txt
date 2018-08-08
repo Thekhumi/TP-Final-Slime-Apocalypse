@@ -1,0 +1,9 @@
+Sprites hechos por mi (Gaspar Nuñez)
+Librerias: Allegro5
+Todos los sonidos son licencias publicas.
+Sonidos:
+Sniper - http://soundbible.com/1788-Sniper-Rifle.html
+Rifle de Asalto - http://soundbible.com/1804-M4A1-Single.html
+
+Musica:
+https://soundcloud.com/jamie-nord/universal
